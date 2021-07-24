@@ -122,7 +122,7 @@
 		0x0004: settlb
 		0x0008: clrtlb
 		0x0010: getclkcyclecnt
-		0x0020: getclkfreq
+		0x0020: getclkfreq getcap getver
 		0x0040: gettlbsize
 		0x0080: getcachesize
 		0x0100: getcoreid

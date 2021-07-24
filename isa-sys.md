@@ -146,3 +146,17 @@
 		the least-significant-bits of the field "vpn";
 		Bit format of the value returned in %gpr1 when there is match:
 		|ppn: 4/20/52|xxx: 7|user: 1|cached: 1|readable: 1|writable: 1|executable: 1|
+
+	getcap %gpr				|2|100|rrrr|0000|
+		Return in %gpr, the pu features:
+		bit0: MMU (Memory Managment Unit) present.
+		bit1: HPTW (Hardware Page Table Walker) capable.
+
+	getver %gpr				|2|101|rrrr|0000|
+		Return in %gpr, the pu version.
+		Format of the version is as follow:
+		|major-version: 8|minor-version: 8|
+		major-version: count new features;
+			compatiblities not guaranteed across different major versions.
+		minor-version: bugfixes or improvements;
+			compatibilities guaranteed across different minor versions and same major versions.
