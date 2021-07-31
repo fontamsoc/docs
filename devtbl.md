@@ -37,7 +37,7 @@
 	The commands are:
 	INFO: Byte offset 0:
 		0: SOCVERSION: returns version of the SoC.
-		1: RAMCACHESZ: returns size of the RAM cache.
+		1: RAMCACHESZ: returns size of the RAM cache in (ARCHBITSZ/8) bytes.
 		2: BOOTORIGIN: returns from which event the SoC booted:
 			0: Hardware CRESET
 			1: PWROFF
