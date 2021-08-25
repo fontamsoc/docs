@@ -22,7 +22,7 @@
 		Its value is the address of
 		the instruction being decoded.
 		Its value can be read using
-		the instruction jl or gip.
+		the instruction jl or rli.
 
 	The following registers are accessible
 	only when the pu is in kernelmode.
