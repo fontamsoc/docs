@@ -103,7 +103,7 @@
 		%gpr1 %= %gpr2;
 
 
-	## Bitwise
+### Bitwise
 
 	and %gpr1, %gpr2			|24|011|rrrr|rrrr|
 		%gpr1 &= %gpr2;
