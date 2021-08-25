@@ -366,6 +366,7 @@
 		Atomically swap the 8 bits value
 		of the memory location in %gpr2
 		with %gpr1, zero extending %gpr1.
+		It is also a memory fence instruction.
 
 	ldst16 %gpr1, %gpr2			|31|001|rrrr|rrrr|
 		Atomically swap the 16 bits value
@@ -375,6 +376,7 @@
 		if the lsb of %gpr2 is non-null, but
 		in kernelmode the lsb of %gpr2 is ignored
 		automatically aligning to 16 bits.
+		It is also a memory fence instruction.
 
 	ldst32 %gpr1, %gpr2			|31|010|rrrr|rrrr|
 		Atomically swap the 32 bits value
@@ -384,6 +386,7 @@
 		if either of the 2 lsb of %gpr2 are non-null,
 		but in kernelmode the 2 lsb of %gpr2 are ignored
 		automatically aligning to 32 bits.
+		It is also a memory fence instruction.
 
 	ldst64 %gpr1, %gpr2			|31|011|rrrr|rrrr|
 		Atomically swap the 64 bits value
@@ -393,6 +396,7 @@
 		if either of the 3 lsb of %gpr2 are non-null,
 		but in kernelmode the 3 lsb of %gpr2 are ignored
 		automatically aligning to 64 bits.
+		It is also a memory fence instruction.
 
 
 ## Pseudo-Instructions
@@ -444,6 +448,7 @@
 		value of the memory location in %gpr2 with
 		the 8 lsb of %gpr1 and zero extend %gpr1;
 		otherwise save loaded value in %gpr1.
+		It is also a memory fence instruction.
 
 	cldst16 %gpr1, %gpr2			|31|101|rrrr|rrrr|
 		Atomically perform following:
@@ -454,6 +459,7 @@
 		value of the memory location in %gpr2 with
 		the 16 lsb of %gpr1 and zero extend %gpr1;
 		otherwise save loaded value in %gpr1.
+		It is also a memory fence instruction.
 
 	cldst32 %gpr1, %gpr2			|31|110|rrrr|rrrr|
 		Atomically perform following:
@@ -463,6 +469,7 @@
 		- If above comparison is true, swap the 32 bits
 		value of the memory location in %gpr2 with the value
 		of %gpr1; otherwise save loaded value in %gpr1.
+		It is also a memory fence instruction.
 
 	cldst64 %gpr1, %gpr2			|31|111|rrrr|rrrr|
 		Atomically perform following:
@@ -472,6 +479,7 @@
 		- If above comparison is true, swap the 64 bits
 		value of the memory location in %gpr2 with the value
 		of %gpr1; otherwise save loaded value in %gpr1.
+		It is also a memory fence instruction.
 
 	syscall					|0|001|0000|0000|
 		System-call instruction.
