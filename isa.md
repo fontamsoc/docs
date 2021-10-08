@@ -398,31 +398,6 @@
 		automatically aligning to 64 bits.
 		It is also a memory fence instruction.
 
-
-## Pseudo-Instructions
-
-	nop
-		cpy %0, %0;
-
-	inc16 %gpr1, imm
-		inc16 %gpr1, %gpr1, imm
-
-	inc32 %gpr1, imm
-		inc32 %gpr1, %gpr1, imm
-
-	inc64 %gpr1, imm
-		inc64 %gpr1, %gpr1, imm
-
-	preemptctx
-		inc8 %0, 0;
-		Triggers PreemptIntr when in usermode
-		and %flags.disPreemptIntr is not set.
-
-	j %gpr
-		jnz %gpr, %gpr;
-		Jump to address 0 is done using:
-			jz %gpr, %gpr;
-
 	cldst8 %gpr1, %gpr2			|31|100|rrrr|rrrr|
 		Atomically perform following:
 		- Load 8 bits value from the memory
@@ -464,6 +439,31 @@
 		value of the memory location in %gpr2 with the value
 		of %gpr1; otherwise save loaded value in %gpr1.
 		It is also a memory fence instruction.
+
+
+## Pseudo-Instructions
+
+	nop
+		cpy %0, %0;
+
+	inc16 %gpr1, imm
+		inc16 %gpr1, %gpr1, imm
+
+	inc32 %gpr1, imm
+		inc32 %gpr1, %gpr1, imm
+
+	inc64 %gpr1, imm
+		inc64 %gpr1, %gpr1, imm
+
+	preemptctx
+		inc8 %0, 0;
+		Triggers PreemptIntr when in usermode
+		and %flags.disPreemptIntr is not set.
+
+	j %gpr
+		jnz %gpr, %gpr;
+		Jump to address 0 is done using:
+			jz %gpr, %gpr;
 
 	syscall					|0|001|0000|0000|
 		System-call instruction.
