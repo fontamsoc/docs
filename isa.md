@@ -362,6 +362,30 @@
 		but in kernelmode the 3 lsb of %gpr2 are ignored
 		automatically aligning to 64 bits.
 
+	vld8 %gpr1, %gpr2			|14|100|rrrr|rrrr|
+		Volatile ld8.
+
+	vld16 %gpr1, %gpr2			|14|101|rrrr|rrrr|
+		Volatile ld16.
+
+	vld32 %gpr1, %gpr2			|14|110|rrrr|rrrr|
+		Volatile ld32.
+
+	vld64 %gpr1, %gpr2			|14|111|rrrr|rrrr|
+		Volatile ld64.
+
+	vst8 %gpr1, %gpr2			|14|000|rrrr|rrrr|
+		Volatile st8.
+
+	vst16 %gpr1, %gpr2			|14|001|rrrr|rrrr|
+		Volatile st16.
+
+	vst32 %gpr1, %gpr2			|14|010|rrrr|rrrr|
+		Volatile st32.
+
+	vst64 %gpr1, %gpr2			|14|011|rrrr|rrrr|
+		Volatile st64.
+
 	ldst8 %gpr1, %gpr2			|31|000|rrrr|rrrr|
 		Atomically swap the 8 bits value
 		of the memory location in %gpr2
