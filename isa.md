@@ -423,22 +423,6 @@
 		Jump to address 0 is done using:
 			jz %gpr, %gpr;
 
-	drli %gpr, imm				|21|100|rrrr|0000|
-						|iiiiiiiiiiiiiiii|
-	drli %gpr, imm				|21|100|rrrr|0000|
-						|iiiiiiiiiiiiiiii| 16 msb.
-						|iiiiiiiiiiiiiiii| 16 lsb.
-	drli %gpr, imm				|21|100|rrrr|0000|
-						|iiiiiiiiiiiiiiii| 16 msb.
-						|iiiiiiiiiiiiiiii|
-						|iiiiiiiiiiiiiiii|
-						|iiiiiiiiiiiiiiii| 16 lsb.
-		Dereference-relative-load-immediate.
-		Set %gpr using the 16/32/64 bits value
-		loaded from address computed using
-		sign extended 16/32/64 bits little-endian
-		immediate added to ipnext.
-
 	cldst8 %gpr1, %gpr2			|31|100|rrrr|rrrr|
 		Atomically perform following:
 		- Load 8 bits value from the memory
