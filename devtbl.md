@@ -11,8 +11,8 @@
 	- DevMapSz: ADDRBITSZ bits.
 		Count of (ARCHBITSZ/8) bytes that the device
 		mapping occupies in the address space.
-	- Reserved-bit; 1bits; must be 0.
-	- DevUseIntr: 1bit; When 1 the device
+	- Reserved: (clog2(ARCHBITSZ/8)-1) bits; must be 0.
+	- DevUseIntr: 1 bit; When 1 the device
 		uses interrupt, otherwise it is 0.
 
 	Scanning through the device-table is to
