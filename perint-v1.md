@@ -3,7 +3,7 @@
 
 # PerInt (PERipheral INTerconnect) v1 description
 
-	ARCHBITSZ is either 16, 32 or 64.
+	ARCHBITSZ is either 16, 32, 64 or 128.
 	ADDRBITSZ == (ARCHBITSZ - clog2(ARCHBITSZ/8)).
 
 ## PerInt signals
