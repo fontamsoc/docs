@@ -65,7 +65,7 @@
 		regardless of whether it matches the value in %gpr2.
 
 	setasid %gpr				|7|100|rrrr|0000|
-		%asid = %gpr;
+		%asid = %gpr; %hptwpgd = %sr;
 		Bit12 indicates whether usermode is running
 		in kernelspace (when 0) or userspace (when 1).
 		%sr is expected to have the address

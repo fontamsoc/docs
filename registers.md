@@ -114,6 +114,12 @@
 		setasid %gpr				|7|100|rrrr|0000|
 			%asid = %gpr;
 
+	%hptwpgd: Write only. 16/32/64 bits wide.
+		Holds Page-Global-Directory address used by
+		HPTW (Hardware Page Table Walker) when non-null.
+		Its value is written using the value of %sr when
+		using the instruction setasid.
+
 	%flags: Write only. 16 bits wide.
 		Hold flags that determine which kernelmode
 		capabilities are allowed in usermode:
