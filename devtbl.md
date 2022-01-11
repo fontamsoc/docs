@@ -19,6 +19,7 @@
 	stop at the entry with DevMapSz null.
 
 	List of currently assigned DevID:
+	-1	: Invalid
 	0	: Memory gap.
 	1	: RAM device.
 	2	: DMA engine.
