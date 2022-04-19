@@ -29,7 +29,7 @@
 	6	: GPIO device.
 	7	: DevTbl.
 	8	: SPI-Master device.
-	9	: PDM device.
+	9	: PWM device.
 
 	devtbl device also implement commands issued through PIRWOP,
 	and ARCHBITSZ bits aligned. The ARCHBITSZ bits aligned offset
