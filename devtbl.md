@@ -46,6 +46,7 @@
 			2: WRESET
 			3: Software CRESET
 		3: PRELDRADDR: returns address of pre-loader.
+		4: SOCID: returns id of the SoC.
 	ACTION: Byte offset (ARCHBITSZ/8):
 		0: PWROFF: poweroff SoC; returns 0 on success, otherwise non-null.
 		1: WRESET: warm-reset SoC; returns 0 on success, otherwise non-null.
