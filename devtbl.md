@@ -8,10 +8,9 @@
 	a single device; the format of each entry is as follow:
 	- DevID: ARCHBITSZ bits.
 		Unique device identifier.
-	- DevMapSz: ADDRBITSZ bits.
-		Count of (ARCHBITSZ/8) bytes that the device
+	- DevMapSz: (ARCHBITSZ-1) bits.
+		Count of 2bytes that the device
 		mapping occupies in the address space.
-	- Reserved: (clog2(ARCHBITSZ/8)-1) bits; must be 0.
 	- DevUseIntr: 1 bit; When 1 the device
 		uses interrupt, otherwise it is 0.
 
