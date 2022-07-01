@@ -29,6 +29,7 @@
 	7	: DevTbl.
 	8	: SPI-Master device.
 	9	: PWM device.
+	10	: FrameBuffer device.
 
 	devtbl device also implement commands issued through PIRWOP,
 	and ARCHBITSZ bits aligned. The ARCHBITSZ bits aligned offset
