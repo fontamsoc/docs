@@ -362,29 +362,37 @@
 		but in kernelmode the 3 lsb of %gpr2 are ignored
 		automatically aligning to 64 bits.
 
-	vld8 %gpr1, %gpr2			|14|100|rrrr|rrrr|
+	ld8v %gpr1, %gpr2			|14|100|rrrr|rrrr|
 		Volatile ld8.
+		Bypass and update l1-dcache.
 
-	vld16 %gpr1, %gpr2			|14|101|rrrr|rrrr|
+	ld16v %gpr1, %gpr2			|14|101|rrrr|rrrr|
 		Volatile ld16.
+		Bypass and update l1-dcache.
 
-	vld32 %gpr1, %gpr2			|14|110|rrrr|rrrr|
+	ld32v %gpr1, %gpr2			|14|110|rrrr|rrrr|
 		Volatile ld32.
+		Bypass and update l1-dcache.
 
-	vld64 %gpr1, %gpr2			|14|111|rrrr|rrrr|
+	ld64v %gpr1, %gpr2			|14|111|rrrr|rrrr|
 		Volatile ld64.
+		Bypass and update l1-dcache.
 
-	vst8 %gpr1, %gpr2			|14|000|rrrr|rrrr|
+	st8v %gpr1, %gpr2			|14|000|rrrr|rrrr|
 		Volatile st8.
+		Bypass and update l1-dcache.
 
-	vst16 %gpr1, %gpr2			|14|001|rrrr|rrrr|
+	st16v %gpr1, %gpr2			|14|001|rrrr|rrrr|
 		Volatile st16.
+		Bypass and update l1-dcache.
 
-	vst32 %gpr1, %gpr2			|14|010|rrrr|rrrr|
+	st32v %gpr1, %gpr2			|14|010|rrrr|rrrr|
 		Volatile st32.
+		Bypass and update l1-dcache.
 
-	vst64 %gpr1, %gpr2			|14|011|rrrr|rrrr|
+	st64v %gpr1, %gpr2			|14|011|rrrr|rrrr|
 		Volatile st64.
+		Bypass and update l1-dcache.
 
 	ldst8 %gpr1, %gpr2			|31|000|rrrr|rrrr|
 		Atomically swap the 8 bits value
