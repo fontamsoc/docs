@@ -18,8 +18,8 @@
 	|    %8    |   %8     |                    | Caller |
 	|    %9    |   %9     |                    | Caller |
 	|    %10   |   %tp    | Task Pointer       | Caller |
-	|    %11   |   %sv    | Struct Value       | Caller |
-	|    %12   |   %sc    | Static Chain       | Caller |
+	|    %11   |   %11    | Struct Value       | Caller |
+	|    %12   |   %12    | Static Chain       | Caller |
 	|    %13   |   %sr    | Scratch Register   |        |
 	|    %14   |   %fp    | Frame Pointer      | Callee |
 	|    %15   |   %rp    | Return Pointer     | Callee |
