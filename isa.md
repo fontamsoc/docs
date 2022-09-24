@@ -428,41 +428,39 @@
 
 	cldst8 %gpr1, %gpr2			|31|100|rrrr|rrrr|
 		Atomically perform following:
-		- Load 8 bits value from the memory
-		location in %gpr2, zero extending it.
+		- Load 8 bits value from memory
+		location in %gpr2, zero-extending it.
 		- Compare %sr with loaded value on whether equal.
-		- If above comparison is true, swap the 8 bits
-		value of the memory location in %gpr2 with
-		the 8 lsb of %gpr1 and zero extend %gpr1;
-		otherwise save loaded value in %gpr1.
+		- If above comparison is true, swap 8 bits value
+		of memory location in %gpr2 with %gpr1 value,
+		otherwise only save loaded value in %gpr1.
 
 	cldst16 %gpr1, %gpr2			|31|101|rrrr|rrrr|
 		Atomically perform following:
-		- Load 16 bits value from the memory
-		location in %gpr2, zero extending it.
+		- Load 16 bits value from memory
+		location in %gpr2, zero-extending it.
 		- Compare %sr with loaded value on whether equal.
-		- If above comparison is true, swap the 16 bits
-		value of the memory location in %gpr2 with
-		the 16 lsb of %gpr1 and zero extend %gpr1;
-		otherwise save loaded value in %gpr1.
+		- If above comparison is true, swap 16 bits value
+		of memory location in %gpr2 with %gpr1 value,
+		otherwise only save loaded value in %gpr1.
 
 	cldst32 %gpr1, %gpr2			|31|110|rrrr|rrrr|
 		Atomically perform following:
-		- Load 32 bits value from the memory
+		- Load 32 bits value from memory
 		location in %gpr2.
 		- Compare %sr with loaded value on whether equal.
-		- If above comparison is true, swap the 32 bits
-		value of the memory location in %gpr2 with the value
-		of %gpr1; otherwise save loaded value in %gpr1.
+		- If above comparison is true, swap 32 bits value
+		of memory location in %gpr2 with %gpr1 value,
+		otherwise only save loaded value in %gpr1.
 
 	cldst64 %gpr1, %gpr2			|31|111|rrrr|rrrr|
 		Atomically perform following:
-		- Load 64 bits value from the memory
+		- Load 64 bits value from memory
 		location in %gpr2.
 		- Compare %sr with loaded value on whether equal.
-		- If above comparison is true, swap the 64 bits
-		value of the memory location in %gpr2 with the value
-		of %gpr1; otherwise save loaded value in %gpr1.
+		- If above comparison is true, swap 64 bits value
+		of memory location in %gpr2 with %gpr1 value,
+		otherwise only save loaded value in %gpr1.
 
 
 ## Pseudo-Instructions
