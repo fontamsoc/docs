@@ -39,15 +39,14 @@
 		un-cached when outside of the same memory range.
 
 	%sysopcode: Read/Write. 16bits wide.
-		When an interrupt occurs, this register
-		get set with the instruction opcode
+		When SysOpIntr interrupt or hypercall occurs,
+		this register get set with the instruction opcode
 		at which the interrupt was triggered.
-		The opcode is stored in such a way
-		that the first byte of the instruction
-		occupy the least significant byte
-		of this register.
-		opcode OPNOTAVAIL (|8|000|0000|0000|) can be
-		returned for ExtIntr, TimerIntr, ExecFaultIntr.
+		The opcode is stored in such a way that
+		the first byte of the instruction occupy
+		the least significant byte of this register.
+		opcode OPNOTAVAIL (|8|000|0000|0000|) is
+		returned for all other interrupt reasons.
 		Its value is read using the instruction:
 		getsysopcode %gpr			|5|000|rrrr|0000|
 			The value of %sysopcode is
