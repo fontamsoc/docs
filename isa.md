@@ -165,17 +165,17 @@
 		16bits little-endian immediate.
 
 	inc32 %gpr1, %gpr2, imm			|20|010|rrrr|rrrr|
-						|iiiiiiiiiiiiiiii| 16 msb.
-						|iiiiiiiiiiiiiiii| 16 lsb.
+						|iiiiiiiiiiiiiiii| 2 least-significant-bytes.
+						|iiiiiiiiiiiiiiii| 2 most-significant-bytes.
 		%gpr1 = %gpr2 + imm;
 		Increment %gpr by the sign extended
 		32bits little-endian immediate.
 
 	inc64 %gpr1, %gpr2, imm			|20|011|rrrr|rrrr|
-						|iiiiiiiiiiiiiiii| 16 msb.
+						|iiiiiiiiiiiiiiii| 2 least-significant-bytes.
 						|iiiiiiiiiiiiiiii|
 						|iiiiiiiiiiiiiiii|
-						|iiiiiiiiiiiiiiii| 16 lsb.
+						|iiiiiiiiiiiiiiii| 2 most-significant-bytes.
 		%gpr1 = %gpr2 + imm;
 		Increment %gpr by the sign extended
 		64bits little-endian immediate.
@@ -190,16 +190,16 @@
 		16bits little-endian immediate.
 
 	li32 %gpr, imm				|21|010|rrrr|0000|
-						|iiiiiiiiiiiiiiii| 16 msb.
-						|iiiiiiiiiiiiiiii| 16 lsb.
+						|iiiiiiiiiiiiiiii| 2 least-significant-bytes.
+						|iiiiiiiiiiiiiiii| 2 most-significant-bytes.
 		Set %gpr using the sign extended
 		32bits little-endian immediate.
 
 	li64 %gpr, imm				|21|011|rrrr|0000|
-						|iiiiiiiiiiiiiiii| 16 msb.
+						|iiiiiiiiiiiiiiii| 2 least-significant-bytes.
 						|iiiiiiiiiiiiiiii|
 						|iiiiiiiiiiiiiiii|
-						|iiiiiiiiiiiiiiii| 16 lsb.
+						|iiiiiiiiiiiiiiii| 2 most-significant-bytes.
 		Set %gpr using the sign extended
 		64bits little-endian immediate.
 
@@ -282,18 +282,18 @@
 		added to ipnext.
 
 	rli32 %gpr, imm				|21|110|rrrr|0000|
-						|iiiiiiiiiiiiiiii| 16 msb.
-						|iiiiiiiiiiiiiiii| 16 lsb.
+						|iiiiiiiiiiiiiiii| 2 least-significant-bytes.
+						|iiiiiiiiiiiiiiii| 2 most-significant-bytes.
 		Relative load-immediate.
 		Set %gpr using the sign extended
 		32bits little-endian immediate
 		added to ipnext.
 
 	rli64 %gpr, imm				|21|111|rrrr|0000|
-						|iiiiiiiiiiiiiiii| 16 msb.
+						|iiiiiiiiiiiiiiii| 2 least-significant-bytes.
 						|iiiiiiiiiiiiiiii|
 						|iiiiiiiiiiiiiiii|
-						|iiiiiiiiiiiiiiii| 16 lsb.
+						|iiiiiiiiiiiiiiii| 2 most-significant-bytes.
 		Relative load-immediate.
 		Set %gpr using the sign extended
 		64bits little-endian immediate
