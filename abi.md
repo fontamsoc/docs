@@ -29,11 +29,12 @@
 ## Calling convention
 
 	The stack grows toward address 0 and is aligned to sizeof(void*).
-	Arguments with a size less-than-or-equal to sizeof(void*)
-	are passed by value while arguments with a size greater-than
-	sizeof(void*) are passed by reference.
-	Arguments 1 thru 7 are passed in registers %1 thru %7 respectively,
-	while arguments beyond the 7th and vargars are passed on the stack
+	Scalar arguments are passed by value while aggregate arguments
+	are passed by reference; for example, a 64bits scalar argument
+	will use 2 registers, with the 32 lower bits stored in the lower
+	indexed register.
+	Arguments are passed in registers %1 thru %7, while arguments which
+	cannot find enough registers and vargars are passed on the stack
 	at the address pointed by %ap.
 	Arguments passed on the stack are aligned to sizeof(void*).
 	Related GCC macros: TARGET_PASS_BY_REFERENCE, TARGET_FUNCTION_ARG.
