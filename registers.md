@@ -122,17 +122,11 @@
 	%flags: Write only. 16 bits wide.
 		Hold flags that determine which kernelmode
 		capabilities are allowed in usermode:
-		0x0001: setasid
+		0x0001: mmucmds
 		0x0002: settimer
-		0x0004: settlb
-		0x0008: clrtlb
-		0x0010: getclkcyclecnt
-		0x0020: getclkfreq getcap getver
-		0x0040: gettlbsize
-		0x0080: getcachesize
-		0x0100: getcoreid
-		0x0200: cacherst
-		0x0400: gettlb
+		0x0010: clkinfo
+		0x0020: sysinfo
+		0x0080: cachecmds
 		0x0800: setflags
 		0x1000: disExtIntr
 		0x2000: disTimerIntr
